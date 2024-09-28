@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqguth4t184sn"]
+
+[ext_resource type="Script" path="res://Pokemon.gd" id="1_vjq3e"]
+
+[node name="Pokemon" type="Area2D"]
+script = ExtResource("1_vjq3e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

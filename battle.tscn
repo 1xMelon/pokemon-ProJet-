@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1qt146w8fmmd"]
+
+[ext_resource type="PackedScene" uid="uid://dqguth4t184sn" path="res://pokemon.tscn" id="1_g53os"]
+
+[node name="Battle" type="Node2D"]
+
+[node name="Tamed_pokemon" parent="." instance=ExtResource("1_g53os")]
+
+[node name="Wild_pokemon" parent="." instance=ExtResource("1_g53os")]
