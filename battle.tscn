@@ -1,9 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1qt146w8fmmd"]
+[gd_scene load_steps=5 format=3 uid="uid://d1qt146w8fmmd"]
 
 [ext_resource type="PackedScene" uid="uid://dqguth4t184sn" path="res://pokemon.tscn" id="1_g53os"]
+[ext_resource type="Texture2D" uid="uid://b87g313ewnlaw" path="res://assets/dwane.jpg" id="1_rn2c0"]
+[ext_resource type="Texture2D" uid="uid://2xmcynbnoyve" path="res://assets/andrew.webp" id="3_rtibn"]
+[ext_resource type="Texture2D" uid="uid://rytk48lvg3gs" path="res://assets/kevin.webp" id="4_384q5"]
 
 [node name="Battle" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(540, 586)
+scale = Vector2(1.07421, 1.04754)
+texture = ExtResource("1_rn2c0")
 
 [node name="Tamed_pokemon" parent="." instance=ExtResource("1_g53os")]
 
 [node name="Wild_pokemon" parent="." instance=ExtResource("1_g53os")]
+
+[node name="Sprite2D" parent="Wild_pokemon" index="0"]
+position = Vector2(1101, 596)
+scale = Vector2(0.158413, 0.148809)
+texture = ExtResource("3_rtibn")
+
+[node name="Kevin" type="Sprite2D" parent="."]
+position = Vector2(50, 589)
+scale = Vector2(0.120175, 0.126074)
+texture = ExtResource("4_384q5")
+
+[editable path="Tamed_pokemon"]
+[editable path="Wild_pokemon"]
