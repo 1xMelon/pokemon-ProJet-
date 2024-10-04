@@ -15,15 +15,13 @@ var stats = {
 	"accuracy": 10,
 	"level": 1,
 	"xp": 1,
-	"type": "normal"
+	"type": Battle.Pokemon_Type.VERBAL_AGRESSIVE
 }
-
-var types = ["physical_agressive", "verbal-agressive", "passive-agressive", "relational-agressive", "slick"]
 
 var skill_set = [
 	{
 		"name": "offend",
-		"type": "verbal_agressive",
+		"type": Battle.Pokemon_Type.VERBAL_AGRESSIVE,
 		"effect": null,
 		"stamina_cost": 10,
 		"scale_stat": "attack",

@@ -1,0 +1,238 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceaej1cjiryhg"]
+
+[ext_resource type="Texture2D" uid="uid://8iwbftbms3e1" path="res://images/lightning-removebg-preview.png" id="1_4lde7"]
+[ext_resource type="Texture2D" uid="uid://d1whjxd0co2pi" path="res://images/heart.png" id="2_2en3s"]
+
+[node name="Battle UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player info" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 429.0
+offset_right = 643.0
+offset_bottom = 503.0
+
+[node name="Player health" type="ColorRect" parent="Player info"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 14.0
+offset_right = 219.0
+offset_bottom = 34.0
+color = Color(0, 1, 0, 1)
+
+[node name="Player missing health" type="ColorRect" parent="Player info"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.16
+anchor_top = -0.074
+offset_left = 67.0
+offset_top = 28.448
+offset_right = 219.0
+offset_bottom = 33.648
+color = Color(1, 0, 0, 1)
+
+[node name="Player health number" type="Label" parent="Player info"]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 14.0
+offset_right = 292.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100/100"
+
+[node name="Player stamina" type="ColorRect" parent="Player info"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 43.0
+offset_right = 219.0
+offset_bottom = 63.0
+color = Color(1, 1, 0, 1)
+
+[node name="Player missing stamina" type="ColorRect" parent="Player info"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = 19.0
+offset_top = 43.0
+offset_right = 219.0
+offset_bottom = 63.0
+color = Color(1, 0, 0, 1)
+
+[node name="Player stamina number" type="Label" parent="Player info"]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 43.0
+offset_right = 292.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100/100"
+
+[node name="Attack" type="Button" parent="Player info"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 80.0
+offset_right = 143.0
+offset_bottom = 130.0
+text = "Attack"
+
+[node name="Items" type="Button" parent="Player info"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 130.0
+offset_right = 243.0
+offset_bottom = 180.0
+text = "Items"
+
+[node name="Brawlers" type="Button" parent="Player info"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 130.0
+offset_right = 143.0
+offset_bottom = 180.0
+text = "Brawlers"
+
+[node name="Run" type="Button" parent="Player info"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 80.0
+offset_right = 243.0
+offset_bottom = 130.0
+text = "Run"
+
+[node name="Attack buttons" type="Control" parent="Player info"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Skill 1" type="Button" parent="Player info/Attack buttons"]
+layout_mode = 0
+offset_left = -331.0
+offset_top = 18.0
+offset_right = -231.0
+offset_bottom = 68.0
+text = "Skill 1"
+
+[node name="Skill 2" type="Button" parent="Player info/Attack buttons"]
+layout_mode = 0
+offset_left = -231.0
+offset_top = 18.0
+offset_right = -131.0
+offset_bottom = 68.0
+text = "Skill 2"
+
+[node name="Color picker" type="ColorRect" parent="Player info"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = -44.0
+offset_right = 232.0
+offset_bottom = -22.0
+color = Color(0, 0.745198, 0.372945, 1)
+
+[node name="Color picker needle" type="ColorRect" parent="Player info"]
+layout_mode = 0
+offset_left = 141.0
+offset_top = -50.0
+offset_right = 146.0
+offset_bottom = -15.0
+color = Color(0, 0, 0, 1)
+
+[node name="Heart" type="TextureRect" parent="Player info"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 6.0
+offset_right = 36.0
+offset_bottom = 40.0
+texture = ExtResource("2_2en3s")
+expand_mode = 1
+
+[node name="Bolt" type="TextureRect" parent="Player info"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 41.0
+offset_right = 34.0
+offset_bottom = 68.0
+texture = ExtResource("1_4lde7")
+expand_mode = 1
+
+[node name="Brawler name" type="Label" parent="Player info"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = -23.0
+offset_right = 162.0
+text = "Kevin"
+
+[node name="Enemy info" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 548.0
+offset_top = 68.0
+offset_right = 848.0
+offset_bottom = 118.0
+
+[node name="Enemy health" type="ColorRect" parent="Enemy info"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 14.0
+offset_right = 224.0
+offset_bottom = 34.0
+color = Color(0, 1, 0, 1)
+
+[node name="Enemy missing health" type="ColorRect" parent="Enemy info"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.16
+anchor_top = -0.074
+offset_left = 72.0
+offset_top = 28.8
+offset_right = 224.0
+offset_bottom = 34.0
+color = Color(1, 0, 0, 1)
+
+[node name="Enemy health number" type="Label" parent="Enemy info"]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 13.0
+offset_right = 289.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100/100
+"
+
+[node name="Heart2" type="TextureRect" parent="Enemy info"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_2en3s")
+expand_mode = 1
+
+[node name="Brawler name" type="Label" parent="Enemy info"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = -28.0
+offset_right = 167.0
+offset_bottom = -5.0
+text = "Andrew"
+
+[node name="Textbox" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 121.0
+offset_right = 492.0
+offset_bottom = 302.0
+
+[node name="Label" type="Label" parent="Textbox"]
+layout_mode = 0
+offset_left = 7.0
+offset_right = 358.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Dwane did 20 damage."

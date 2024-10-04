@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b87g313ewnlaw"
-path="res://.godot/imported/dwane.jpg-6235e9535479b101739600a0790ad2c1.ctex"
+path="res://.godot/imported/dwane.jpg-38634afcf2c99da1a0cb4880704cbc80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dwane.jpg"
-dest_files=["res://.godot/imported/dwane.jpg-6235e9535479b101739600a0790ad2c1.ctex"]
+source_file="res://images/dwane.jpg"
+dest_files=["res://.godot/imported/dwane.jpg-38634afcf2c99da1a0cb4880704cbc80.ctex"]
 
 [params]
 
