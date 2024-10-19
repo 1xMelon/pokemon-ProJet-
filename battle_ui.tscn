@@ -1,22 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://ceaej1cjiryhg"]
+[gd_scene load_steps=5 format=3 uid="uid://ceaej1cjiryhg"]
 
 [ext_resource type="Texture2D" uid="uid://8iwbftbms3e1" path="res://images/lightning-removebg-preview.png" id="1_4lde7"]
+[ext_resource type="Script" path="res://battle_ui.gd" id="1_uashe"]
 [ext_resource type="Texture2D" uid="uid://d1whjxd0co2pi" path="res://images/heart.png" id="2_2en3s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k183n"]
+bg_color = Color(1, 0, 0, 1)
 
 [node name="Battle UI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uashe")
 
 [node name="Player info" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 343.0
-offset_top = 429.0
-offset_right = 643.0
-offset_bottom = 503.0
+offset_left = 291.0
+offset_top = 396.0
+offset_right = 591.0
+offset_bottom = 470.0
 
 [node name="Player health" type="ColorRect" parent="Player info"]
 layout_mode = 0
@@ -74,58 +81,104 @@ offset_bottom = 66.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "100/100"
 
-[node name="Attack" type="Button" parent="Player info"]
+[node name="Back button" type="Button" parent="Player info"]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 80.0
-offset_right = 143.0
-offset_bottom = 130.0
-text = "Attack"
+offset_left = 689.0
+offset_top = 58.0
+offset_right = 748.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_k183n")
+text = "X"
 
-[node name="Items" type="Button" parent="Player info"]
-layout_mode = 0
-offset_left = 143.0
-offset_top = 130.0
-offset_right = 243.0
-offset_bottom = 180.0
-text = "Items"
+[node name="Action buttons" type="Control" parent="Player info"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Brawlers" type="Button" parent="Player info"]
+[node name="Items" type="Button" parent="Player info/Action buttons"]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 130.0
-offset_right = 143.0
-offset_bottom = 180.0
-text = "Brawlers"
+offset_left = 534.0
+offset_top = 34.0
+offset_right = 684.0
+offset_bottom = 109.0
+theme_override_font_sizes/font_size = 30
+text = "ITEMS"
 
-[node name="Run" type="Button" parent="Player info"]
+[node name="Attack" type="Button" parent="Player info/Action buttons"]
 layout_mode = 0
-offset_left = 143.0
-offset_top = 80.0
-offset_right = 243.0
-offset_bottom = 130.0
-text = "Run"
+offset_left = 380.0
+offset_top = -45.0
+offset_right = 530.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 30
+text = "ATTACK"
+
+[node name="Brawlers" type="Button" parent="Player info/Action buttons"]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 34.0
+offset_right = 531.0
+offset_bottom = 109.0
+theme_override_font_sizes/font_size = 28
+text = "BRAWLERS"
+
+[node name="Run" type="Button" parent="Player info/Action buttons"]
+layout_mode = 0
+offset_left = 534.0
+offset_top = -45.0
+offset_right = 684.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 30
+text = "RUN"
 
 [node name="Attack buttons" type="Control" parent="Player info"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Skill 1" type="Button" parent="Player info/Attack buttons"]
 layout_mode = 0
-offset_left = -331.0
-offset_top = 18.0
-offset_right = -231.0
-offset_bottom = 68.0
+offset_left = 379.0
+offset_top = -46.0
+offset_right = 529.0
+offset_bottom = 29.0
+theme_override_font_sizes/font_size = 30
 text = "Skill 1"
 
 [node name="Skill 2" type="Button" parent="Player info/Attack buttons"]
 layout_mode = 0
-offset_left = -231.0
-offset_top = 18.0
-offset_right = -131.0
-offset_bottom = 68.0
+offset_left = 533.0
+offset_top = -46.0
+offset_right = 683.0
+offset_bottom = 29.0
+theme_override_font_sizes/font_size = 30
 text = "Skill 2"
+
+[node name="Skill 3" type="Button" parent="Player info/Attack buttons"]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 32.0
+offset_right = 529.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 30
+text = "Skill 3"
+
+[node name="Skill 4" type="Button" parent="Player info/Attack buttons"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 32.0
+offset_right = 683.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 30
+text = "Skill 3"
+
+[node name="Bag buttons" type="Control" parent="Player info"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Color picker" type="ColorRect" parent="Player info"]
 layout_mode = 0
@@ -236,3 +289,6 @@ offset_right = 358.0
 offset_bottom = 26.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Dwane did 20 damage."
+
+[connection signal="pressed" from="Player info/Back button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Player info/Action buttons/Attack" to="." method="_on_attack_pressed"]
